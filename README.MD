@@ -56,3 +56,15 @@ provider "github" {
 
 ```
 
+### Terraform Destroy
+
+```tf
+## Destruir tudo
+terraform destroy
+
+terraform destroy -target 
+
+```
+
+
+
