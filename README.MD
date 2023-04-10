@@ -74,4 +74,10 @@ terraform destroy -target aws_instance.myec2
 ### TFSTATE
 Tfstate file contem todo o estado do que foi aplicado via terraform. Este arquivo possui todos os detalhes do que foi deployado, se ele for perdido sua automação ficará quebrada.É importante ter um backup desse arquivo para ambientes produtivos aprovsionados.
 
+### Refresh
 
+terraform refresh
+
+Este comando atualiza informações com o tfstate quando uma alteração é realizada de forma manual no ambiente. Por exemplo, vc tem uma instância tipo t2.micro e precisa aumentar os recursos desta. Ao invés de aumentar via terraform, vc aumentou o recurso via AWS console. 
+
+Para sincronizar esta alteração com o tfstate é necessário rodar o (terraform refresh) do contrário ao utilizar o terraform novamente esta alteração será revertida para o desired state.
