@@ -71,4 +71,7 @@ terraform destroy -target aws_instance.myec2
 
 ![image](https://user-images.githubusercontent.com/91738714/230953978-35c60193-c21a-4276-9ec4-d324b7e7d087.png)
 
+### TFSTATE
+Tfstate file contem todo o estado do que foi aplicado via terraform. Este arquivo possui todos os detalhes do que foi deployado, se ele for perdido sua automação ficará quebrada.É importante ter um backup desse arquivo para ambientes produtivos aprovsionados.
+
 
